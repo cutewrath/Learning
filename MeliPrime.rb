@@ -1,22 +1,26 @@
-def is_prime? (number)
-divisor = 2 #start at 2, if start at 1 would result in false negative. Besides, primes are divisible by 1!
-	if (number == 1 or number == 2)
+def is_prime? (x)
+	if (x == 1 or x == 2)
 		return true
-	elsif number%divisor == 0 
+	end
+	y = 2 #start at 2, if start at 1 would result in false negative. Besides, primes are divisible by 1!
+	if x%y == 0 
 		return false
-	else
+	elsif (Math.sqrt(x))/(y) == 1
+		return false
+	else 
 		return true 
-	end while (divisor <number) #ending divisor loop
-divisor = divisor + 1 
+	y=y+1 
+	end while (y<x) #ending y loop	
 end #ending def
-#==================================================================================
-start_time = Time.now
-number = 1 # this will start cycling through the range testing for if prime
+
+start_time=Time.now
+x=1
 begin
-	if is_prime? (number) #if is_prime? is true
-		puts number.to_s #then the number number will be listed - should see 1, 2, 3, 5, 7, 11... 
-		number = number + 1 #this keeps the checker moving
-	end while (number <= 1000) #ending number loop
-end #ending begin 
-fin_time = Time.now
+	if is_prime?(x)  
+		puts x.to_s #then the x x will be listed - should see 1, 2, 3, 5, 7, 11... 
+	end
+	x=x + 1 #this keeps the checker moving
+end while (x<1000) #ending if
+
+fin_time=Time.now
 puts (fin_time-start_time)
