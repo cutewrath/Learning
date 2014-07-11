@@ -19,7 +19,9 @@ array_primes = Proc.new do |array| #build array of primes
 	end #ending do 
 	x=x + 1 #this keeps the checker moving
 end while (x<MAX_NUM) #ending begin 
-	
+
+puts array_primes.to_s
+
 puts array_primes[MAX_NUM].inspect #i need to verify this works before replacing sqrt (x) in def. 
 
 fin_time=Time.now
