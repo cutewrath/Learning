@@ -3,6 +3,7 @@ i = 0
 #f = [  ]
 #b = [  ]
 
+SIZE = 13
 RULE_30 = [0,1,1,1,1,0,0,0]
 
 #convert binary values from index trios to an integer for Rule 30 check
@@ -19,7 +20,6 @@ def lookup(value)
 end
 
 
-SIZE = 8
 a = []
 a[0] = Array.new(SIZE)
 a[1] = Array.new(SIZE)
