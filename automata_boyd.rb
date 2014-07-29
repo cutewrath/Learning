@@ -73,6 +73,8 @@ begin
 
 	sleep 0.1
 
+	# read the keyboard in a non-blocking fashion
+	# http://stackoverflow.com/questions/946738/detect-key-press-non-blocking-w-o-getc-gets-in-ruby
 	system("stty raw -echo")
   char = STDIN.read_nonblock(1) rescue nil
   system("stty -raw echo")
